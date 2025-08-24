@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+#Calulate the high and low for fibo retracement
 def print_close_high_low(df):
     high = df['Close'].max()
     low = df['Close'].min()
