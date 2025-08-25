@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-#Calulate the high and low for fibo retracement
+# Calculate the high and low for fibo retracement
 def print_close_high_low(df):
     high = df['Close'].max()
     low = df['Close'].min()
@@ -10,8 +10,9 @@ def print_close_high_low(df):
     print(f"Lowest Close Price: {low}")
     return high, low
 
+
 # Load data from CSV file
-stock_name= "ERIS"
+stock_name = "LTFOODS"
 df = pd.read_csv(f'C:\\PythonAutomation\\quant\\{stock_name}.csv')
 
 # First try the 4-digit year
@@ -43,7 +44,7 @@ colors = ['red', 'purple', 'green', 'blue', 'brown', 'gray', 'black']
 for price, color, level in zip(fib_prices, colors, fib_levels):
     plt.axhline(price, linestyle=':', color=color)
     # Place retracement % and value on right side
-    plt.text(df['FormattedDate'].iloc[-1], price, f'{int(level*100)}% ({price:.2f})',
+    plt.text(df['FormattedDate'].iloc[-1], price, f'{int(level * 100)}% ({price:.2f})',
              color=color, va='center', ha='left', fontsize=9, fontweight='bold')
 
 plt.title('Stock Closing Price & 50-Day Moving Average Over Time with Fibonacci Retracements')
