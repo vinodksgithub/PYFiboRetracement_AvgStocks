@@ -43,10 +43,10 @@ def average_csv_close(folder_path, column_name='Close'):
     })
 
     # Save as average_file.csv
-    output_file = os.path.join(folder_path, 'average_file.csv')
+    output_file = os.path.join(folder_path, '../average_file.csv')
     result_df.to_csv(output_file, index=False)
 
     print(f"Average 'Close' values with 'Date' written to {output_file}")
 
 # Example usage:
-average_csv_close("C:/PythonAutomation/quant")
+average_csv_close("C:/PythonAutomation/quant/raw")

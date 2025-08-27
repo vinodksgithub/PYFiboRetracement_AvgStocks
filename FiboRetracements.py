@@ -12,7 +12,7 @@ def print_close_high_low(df):
 
 
 # Load data from CSV file
-stock_name = "LTFOODS"
+stock_name = "average_file"
 df = pd.read_csv(f'C:\\PythonAutomation\\quant\\{stock_name}.csv')
 
 # First try the 4-digit year
